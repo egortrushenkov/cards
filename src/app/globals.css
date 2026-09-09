@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
+    overflow-x: clip;
+  }
+  ::selection {
+    background: rgba(229, 50, 58, 0.2);
+    color: #0c0c0f;
+  }
+  :focus-visible {
+    outline: 2px solid #e5323a;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.28em] text-accent;
+  }
+  /* Светлая «стеклянная» карточка: белая подложка, тонкая линия, мягкая тень. */
+  .glass {
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(12, 12, 15, 0.08);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset, 0 24px 50px -36px rgba(12, 12, 15, 0.35);
+    backdrop-filter: blur(16px);
+  }
+  .grid-bg {
+    background-image: linear-gradient(rgba(12, 12, 15, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(12, 12, 15, 0.07) 1px, transparent 1px);
+    background-size: 64px 64px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 0%, black 15%, transparent 70%);
+    mask-image: radial-gradient(ellipse at 50% 0%, black 15%, transparent 70%);
+  }
+  .corner::before,
+  .corner::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid #e5323a;
+  }
+  .corner::before {
+    top: -1px;
+    left: -1px;
+    border-right: 0;
+    border-bottom: 0;
+  }
+  .corner::after {
+    bottom: -1px;
+    right: -1px;
+    border-left: 0;
+    border-top: 0;
+  }
+  .illustration {
+    @apply h-auto w-full rounded-[28px] border border-foreground/10 shadow-card;
+  }
+}
