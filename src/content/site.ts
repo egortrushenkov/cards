@@ -2,7 +2,7 @@
 // собрано здесь: цены, контакты, реквизиты.
 
 export const SITE_URL = (process.env.SITE_URL || 'https://example.ru').replace(/\/+$/, '');
-export const SITE_NAME = 'Оплата подписок';
+export const SITE_NAME = 'HashMarket - оплата подписок';
 export const TAGLINE = 'Зарубежные подписки и сервисы';
 
 /** Username менеджера подставляет server.js при отдаче страницы (MANAGER_USERNAME). */

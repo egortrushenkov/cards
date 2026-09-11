@@ -51,7 +51,7 @@ const og = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" vi
   <image href="data:image/png;base64,${logo64}" x="780" y="135" width="360" height="360" filter="url(#sh)"/>
   <g transform="translate(72 72)">
     <image href="data:image/png;base64,${logo64}" width="56" height="56"/>
-    <text x="72" y="38" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="${INK}">Оплата подписок</text>
+    <text x="72" y="38" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="${INK}">HashMarket · оплата подписок</text>
   </g>
   <text x="72" y="255" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-2" fill="${INK}">Оплатим любую</text>
   <text x="72" y="330" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="-2" fill="${INK}">зарубежную подписку</text>
