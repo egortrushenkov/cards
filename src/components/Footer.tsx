@@ -15,11 +15,17 @@ export function Footer() {
         </div>
 
         <nav aria-label="Документы" className="flex flex-col gap-3 text-sm">
+          <a href="/oferta/" className="text-muted hover:text-foreground">
+            Публичная оферта
+          </a>
           <a href="/politika/" className="text-muted hover:text-foreground">
             Политика обработки персональных данных
           </a>
-          <a href="#faq" className="text-muted hover:text-foreground">
-            Условия и вопросы
+          <a href="/soglasie/" className="text-muted hover:text-foreground">
+            Согласие на обработку персональных данных
+          </a>
+          <a href="/#faq" className="text-muted hover:text-foreground">
+            Вопросы и ответы
           </a>
         </nav>
 

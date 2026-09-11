@@ -29,7 +29,9 @@ npm start                # node server.js → http://localhost:3000
 
 Username менеджера не пишется в код: `server.js` подставляет `MANAGER_USERNAME` из `.env` в ссылку
 `https://t.me/...` при отдаче страницы. `SITE_URL` в `.env` нужен для canonical и OpenGraph при сборке.
-Текст политики — плейсхолдер в `src/app/politika`.
+Юридические документы: `src/app/politika` (политика по 152-ФЗ), `src/app/oferta` (публичная оферта),
+`src/app/soglasie` (согласие для формы). Реквизиты и сроки для них — в `src/content/legal.ts`:
+заполните ОГРНИП, адрес и почту для обращений.
 
 ## Приём заявок
 

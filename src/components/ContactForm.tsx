@@ -27,6 +27,7 @@ export function ContactForm() {
     if (!data.name?.trim()) return setError('Как к вам обращаться?');
     if (!data.contact?.trim()) return setError('Оставьте Telegram, телефон или почту, чтобы мы могли ответить.');
     if (!data.service?.trim()) return setError('Напишите, какую подписку или сервис оплатить.');
+    if (!data.consent) return setError('Чтобы отправить заявку, отметьте согласие на обработку персональных данных.');
     setError(null);
     setStatus('sending');
 
@@ -137,6 +138,31 @@ export function ContactForm() {
                 </p>
               ) : null}
 
+              <label className="mt-5 flex items-start gap-3 text-sm leading-relaxed text-muted">
+                <input
+                  type="checkbox"
+                  name="consent"
+                  value="yes"
+                  required
+                  className="mt-1 h-4 w-4 shrink-0 accent-accent"
+                />
+                <span>
+                  Даю{' '}
+                  <a href="/soglasie/" className="underline hover:text-foreground">
+                    согласие на обработку персональных данных
+                  </a>{' '}
+                  и принимаю условия{' '}
+                  <a href="/oferta/" className="underline hover:text-foreground">
+                    публичной оферты
+                  </a>
+                  . С{' '}
+                  <a href="/politika/" className="underline hover:text-foreground">
+                    политикой обработки данных
+                  </a>{' '}
+                  ознакомлен.
+                </span>
+              </label>
+
               <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   type="submit"
@@ -146,13 +172,6 @@ export function ContactForm() {
                   <Send className="h-4 w-4" aria-hidden="true" />
                   {status === 'sending' ? 'Отправляем…' : 'Отправить заявку'}
                 </button>
-                <p className="text-xs leading-relaxed text-muted">
-                  Нажимая кнопку, вы соглашаетесь с{' '}
-                  <a href="/politika/" className="underline hover:text-foreground">
-                    политикой обработки данных
-                  </a>
-                  .
-                </p>
               </div>
             </form>
           )}

@@ -9,11 +9,11 @@ import {cn} from '@/lib/utils';
 import {TELEGRAM_HREF} from '@/content/site';
 
 const LINKS = [
-  {href: '#audience', label: 'Что оплачиваю'},
-  {href: '#how', label: 'Как работает'},
-  {href: '#prices', label: 'Цены'},
-  {href: '#faq', label: 'Вопросы'},
-  {href: '#contact', label: 'Контакты'},
+  {href: '/#audience', label: 'Что оплачиваю'},
+  {href: '/#how', label: 'Как работает'},
+  {href: '/#prices', label: 'Цены'},
+  {href: '/#faq', label: 'Вопросы'},
+  {href: '/#contact', label: 'Контакты'},
 ];
 
 export function Navbar() {

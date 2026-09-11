@@ -20,9 +20,13 @@
     }
   }
   body {
-    @apply bg-background text-foreground antialiased;
+    @apply flex min-h-dvh flex-col bg-background text-foreground antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1, 'ss01' 1;
     overflow-x: clip;
+  }
+  /* Подвал прижат к низу даже на коротких страницах. */
+  body > main {
+    flex: 1 0 auto;
   }
   ::selection {
     background: rgba(208, 24, 48, 0.2);
@@ -74,6 +78,22 @@
     right: -1px;
     border-left: 0;
     border-top: 0;
+  }
+  .prose-legal h2 {
+    @apply mt-10 text-xl font-semibold tracking-tight md:text-2xl;
+  }
+  .prose-legal p {
+    @apply mt-4 leading-relaxed text-foreground/85;
+  }
+  .prose-legal ul {
+    @apply mt-4 space-y-2 pl-5 leading-relaxed text-foreground/85;
+    list-style: disc;
+  }
+  .prose-legal li::marker {
+    color: #d01830;
+  }
+  .prose-legal strong {
+    @apply font-semibold text-foreground;
   }
   .illustration {
     @apply h-auto w-full rounded-[28px] border border-foreground/10 shadow-card;
