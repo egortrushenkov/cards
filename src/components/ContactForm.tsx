@@ -5,7 +5,7 @@ import {CheckCircle2, Send} from 'lucide-react';
 import {useState, type FormEvent} from 'react';
 
 import {Reveal} from './Reveal';
-import {CONTACT_EMAIL, RESPONSE_TIME, TELEGRAM_HREF} from '@/content/site';
+import {RESPONSE_TIME, TELEGRAM_HREF} from '@/content/site';
 import {cn} from '@/lib/utils';
 
 type Status = 'idle' | 'sending' | 'sent';
@@ -66,11 +66,6 @@ export function ContactForm() {
               <a href={TELEGRAM_HREF} target="_blank" rel="noopener" className="inline-flex items-center gap-3 hover:text-accent-hot">
                 <Send className="h-5 w-5 text-accent" aria-hidden="true" />
                 Написать в Telegram
-              </a>
-            </li>
-            <li>
-              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-accent-hot">
-                {CONTACT_EMAIL}
               </a>
             </li>
           </ul>

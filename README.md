@@ -24,7 +24,7 @@ npm start                # node server.js → http://localhost:3000
 Всё в одном файле `src/content/site.ts`:
 
 - **Цены** (`PLANS`): три тарифа с процентом комиссии и минимумом. Цифры сейчас — рабочая заготовка, поставьте свои.
-- Скорость ответа и оплаты (`RESPONSE_TIME`, `PAYMENT_TIME`), почта (`CONTACT_EMAIL`), кто оказывает услугу (`OWNER`).
+- Скорость ответа и оплаты (`RESPONSE_TIME`, `PAYMENT_TIME`), кто оказывает услугу (`OWNER`).
 - Тексты блоков «Почему это работает», «Кому подходит», «Как работает», вопросы-ответы, бегущая строка сервисов.
 
 Username менеджера не пишется в код: `server.js` подставляет `MANAGER_USERNAME` из `.env` в ссылку
@@ -48,7 +48,8 @@ src/content/site.ts тексты, цены, контакты
 server.js           боевой сервер
 ```
 
-Картинки с платёжными картами нарисованы кодом: `node scripts/make-cards.mjs` → `src/images/card-*.webp`
+Логотип, favicon, иконка для iPhone и картинка превью для соцсетей (`public/og.png`) генерируются
+`node scripts/make-brand.mjs`. Картинки с платёжными картами нарисованы кодом: `node scripts/make-cards.mjs` → `src/images/card-*.webp`
 (нужен `sharp`). Промпты для замены на сгенерированные — в `docs/IMAGE-PROMPTS.md`.
 
 Шрифты: Inter локально (`src/app/fonts`), Playfair Display и JetBrains Mono через `next/font/google`

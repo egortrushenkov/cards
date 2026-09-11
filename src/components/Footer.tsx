@@ -1,22 +1,17 @@
 import {Send} from 'lucide-react';
 
-import {CONTACT_EMAIL, OWNER, SITE_NAME, TELEGRAM_HREF} from '@/content/site';
+import {Logo} from './Logo';
+import {OWNER, TELEGRAM_HREF} from '@/content/site';
 
 export function Footer() {
   return (
     <footer className="border-t border-foreground/10 bg-surface">
       <div className="container-x flex flex-col gap-10 py-14 md:flex-row md:items-start md:justify-between">
         <div>
-          <a href="#top" className="flex items-center gap-3 font-semibold">
-            <span className="grid h-9 w-9 place-items-center rounded-full bg-accent font-mono text-sm text-white">₽</span>
-            {SITE_NAME}
-          </a>
+          <Logo />
           <p className="mt-6 text-sm text-muted">
             {OWNER.status} {OWNER.name}, ИНН {OWNER.inn}
           </p>
-          <a href={`mailto:${CONTACT_EMAIL}`} className="text-sm text-muted hover:text-foreground">
-            {CONTACT_EMAIL}
-          </a>
         </div>
 
         <nav aria-label="Документы" className="flex flex-col gap-3 text-sm">

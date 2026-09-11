@@ -7,7 +7,6 @@ export const TAGLINE = 'Зарубежные подписки и сервисы'
 
 /** Username менеджера подставляет server.js при отдаче страницы (MANAGER_USERNAME). */
 export const TELEGRAM_HREF = 'https://t.me/__MANAGER_USERNAME__';
-export const CONTACT_EMAIL = 'hello@example.ru';
 
 /** Кто оказывает услугу: подвал и политика. */
 export const OWNER = {

@@ -4,8 +4,9 @@ import {AnimatePresence, motion, useMotionValueEvent, useScroll} from 'framer-mo
 import {Menu, Send, X} from 'lucide-react';
 import {useState} from 'react';
 
+import {Logo} from './Logo';
 import {cn} from '@/lib/utils';
-import {SITE_NAME, TELEGRAM_HREF} from '@/content/site';
+import {TELEGRAM_HREF} from '@/content/site';
 
 const LINKS = [
   {href: '#audience', label: 'Что оплачиваю'},
@@ -29,10 +30,7 @@ export function Navbar() {
           scrolled && 'py-3',
         )}
       >
-        <a href="#top" className="flex items-center gap-3 font-semibold tracking-tight">
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-accent font-mono text-sm text-white">₽</span>
-          <span>{SITE_NAME}</span>
-        </a>
+        <Logo />
 
         <nav aria-label="Разделы" className="hidden items-center gap-8 md:flex">
           {LINKS.map((l) => (
