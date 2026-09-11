@@ -5,7 +5,7 @@ import {Send} from 'lucide-react';
 import {useEffect, useState} from 'react';
 
 import {MagneticButton} from './MagneticButton';
-import {RESPONSE_TIME, TELEGRAM_HREF} from '@/content/site';
+import {RESPONSE_TIME, TG_TEXT, tgLink} from '@/content/site';
 
 const WORDS = ['ChatGPT Plus', 'Netflix', 'Google Ads', 'Figma', 'Spotify', 'AWS'];
 
@@ -56,7 +56,7 @@ export function Cta() {
           Напишите, что оплатить и на какой срок. Ответим {RESPONSE_TIME} в рабочее время и назовём сумму в рублях.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <MagneticButton href={TELEGRAM_HREF} external className="px-9 py-5 text-base">
+          <MagneticButton href={tgLink(TG_TEXT.general)} external className="px-9 py-5 text-base">
             <Send className="h-5 w-5" aria-hidden="true" />
             Написать в Telegram
           </MagneticButton>

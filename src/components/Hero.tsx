@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import {MagneticButton} from './MagneticButton';
 import heroImage from '@/images/card-stack.webp';
-import {PAYMENT_TIME, TAGLINE, TELEGRAM_HREF} from '@/content/site';
+import {PAYMENT_TIME, TAGLINE, TG_TEXT, tgLink} from '@/content/site';
 
 const TRUST = ['Наши зарубежные карты', 'Сумма известна до перевода', 'Чек после оплаты', 'Возврат, если платёж не прошёл'];
 
@@ -48,7 +48,7 @@ export function Hero() {
               </motion.p>
 
               <motion.div {...fade(0.3)} className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-                <MagneticButton href={TELEGRAM_HREF} external>
+                <MagneticButton href={tgLink(TG_TEXT.general)} external>
                   <Send className="h-4 w-4" aria-hidden="true" />
                   Написать в Telegram
                 </MagneticButton>

@@ -27,7 +27,8 @@ npm start                # node server.js → http://localhost:3000
 - Скорость ответа и оплаты (`RESPONSE_TIME`, `PAYMENT_TIME`), кто оказывает услугу (`OWNER`).
 - Тексты блоков «Почему это работает», «Кому подходит», «Как работает», вопросы-ответы, бегущая строка сервисов.
 
-Username менеджера не пишется в код: `server.js` подставляет `MANAGER_USERNAME` из `.env` в ссылку
+Кнопки «Написать в Telegram» открывают чат с заранее вписанным текстом (`TG_TEXT` в `src/content/site.ts`,
+ссылка вида `t.me/username?text=…`). Username менеджера не пишется в код: `server.js` подставляет `MANAGER_USERNAME` из `.env` в ссылку
 `https://t.me/...` при отдаче страницы. `SITE_URL` в `.env` нужен для canonical и OpenGraph при сборке.
 Юридические документы: `src/app/politika` (политика по 152-ФЗ), `src/app/oferta` (публичная оферта),
 `src/app/soglasie` (согласие для формы). Реквизиты и сроки для них — в `src/content/legal.ts`:

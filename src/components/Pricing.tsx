@@ -1,7 +1,7 @@
 import {Check, Send} from 'lucide-react';
 
 import {Reveal} from './Reveal';
-import {PLANS, TELEGRAM_HREF} from '@/content/site';
+import {PLANS, TG_TEXT, tgLink} from '@/content/site';
 import {cn} from '@/lib/utils';
 
 export function Pricing() {
@@ -49,7 +49,7 @@ export function Pricing() {
                 ))}
               </ul>
               <a
-                href={TELEGRAM_HREF}
+                href={tgLink(TG_TEXT.plan(plan.name))}
                 target="_blank"
                 rel="noopener"
                 className={cn(

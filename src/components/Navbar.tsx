@@ -6,7 +6,7 @@ import {useState} from 'react';
 
 import {Logo} from './Logo';
 import {cn} from '@/lib/utils';
-import {TELEGRAM_HREF} from '@/content/site';
+import {TG_TEXT, tgLink} from '@/content/site';
 
 const LINKS = [
   {href: '/#audience', label: 'Что оплачиваю'},
@@ -42,7 +42,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-3">
           <a
-            href={TELEGRAM_HREF}
+            href={tgLink(TG_TEXT.general)}
             target="_blank"
             rel="noopener"
             className="hidden items-center gap-2 rounded-full bg-foreground px-5 py-2.5 text-sm font-semibold text-background transition-colors hover:bg-accent hover:text-white sm:inline-flex"
@@ -91,7 +91,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href={TELEGRAM_HREF}
+                href={tgLink(TG_TEXT.general)}
                 target="_blank"
                 rel="noopener"
                 className="mt-1 inline-flex items-center justify-center gap-2 rounded-2xl bg-accent px-4 py-3 font-semibold text-white"

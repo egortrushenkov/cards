@@ -1,7 +1,7 @@
 import {Send} from 'lucide-react';
 
 import {Logo} from './Logo';
-import {OWNER, TELEGRAM_HREF} from '@/content/site';
+import {OWNER, TG_TEXT, tgLink} from '@/content/site';
 
 export function Footer() {
   return (
@@ -30,7 +30,7 @@ export function Footer() {
         </nav>
 
         <a
-          href={TELEGRAM_HREF}
+          href={tgLink(TG_TEXT.question)}
           target="_blank"
           rel="noopener"
           className="inline-flex items-center gap-2 self-start rounded-full border border-foreground/15 px-5 py-3 text-sm font-semibold transition-colors hover:border-accent hover:text-accent-hot"
