@@ -12,9 +12,9 @@ const config: Config = {
         muted: '#5f606b',
         line: 'rgba(12,12,15,0.1)',
         accent: {
-          DEFAULT: '#e5323a',
-          soft: 'rgba(229,50,58,0.09)',
-          hot: '#c8202a',
+          DEFAULT: '#d01830',
+          soft: 'rgba(208,24,48,0.09)',
+          hot: '#b0142a',
         },
       },
       fontFamily: {
@@ -23,7 +23,7 @@ const config: Config = {
         mono: ['var(--font-mono)', 'ui-monospace', 'monospace'],
       },
       boxShadow: {
-        glow: '0 24px 60px -24px rgba(229,50,58,0.45)',
+        glow: '0 24px 60px -24px rgba(208,24,48,0.45)',
         card: '0 30px 60px -40px rgba(12,12,15,0.35)',
       },
       keyframes: {

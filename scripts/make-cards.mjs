@@ -8,8 +8,8 @@ const OUT_DIR = path.resolve('src/images');
 fs.mkdirSync(OUT_DIR, {recursive: true});
 
 const C = {
-  red: '#E5323A',
-  redDark: '#B01F27',
+  red: '#D01830',
+  redDark: '#A0122A',
   ink: '#0C0C0F',
   inkSoft: '#2A2B33',
   paper: '#FFFFFF',
@@ -32,7 +32,7 @@ const mono = 'font-family="Consolas, JetBrains Mono, monospace"';
 const defs = `
 <defs>
   <linearGradient id="gRed" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#FF5A61"/><stop offset="1" stop-color="${C.redDark}"/>
+    <stop offset="0" stop-color="#F04455"/><stop offset="1" stop-color="${C.redDark}"/>
   </linearGradient>
   <linearGradient id="gInk" x1="0" y1="0" x2="1" y2="1">
     <stop offset="0" stop-color="#3A3B45"/><stop offset="1" stop-color="${C.ink}"/>

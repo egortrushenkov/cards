@@ -25,11 +25,11 @@
     overflow-x: clip;
   }
   ::selection {
-    background: rgba(229, 50, 58, 0.2);
+    background: rgba(208, 24, 48, 0.2);
     color: #0c0c0f;
   }
   :focus-visible {
-    outline: 2px solid #e5323a;
+    outline: 2px solid #d01830;
     outline-offset: 3px;
   }
 }
@@ -61,7 +61,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    border: 1.5px solid #e5323a;
+    border: 1.5px solid #d01830;
   }
   .corner::before {
     top: -1px;

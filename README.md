@@ -48,8 +48,9 @@ src/content/site.ts тексты, цены, контакты
 server.js           боевой сервер
 ```
 
-Логотип, favicon, иконка для iPhone и картинка превью для соцсетей (`public/og.png`) генерируются
-`node scripts/make-brand.mjs`. Картинки с платёжными картами нарисованы кодом: `node scripts/make-cards.mjs` → `src/images/card-*.webp`
+Фирменный знак лежит в `brand/logo-source.png` (тёмный вариант — `brand/logo-dark.png`). Из него `node scripts/make-brand.mjs`
+собирает логотип для шапки (`src/images/logo.png`), favicon (`src/app/icon.png`, плюс `src/app/favicon.ico`),
+иконку для iPhone (`src/app/apple-icon.png`) и картинку превью для соцсетей (`public/og.png`). Картинки с платёжными картами нарисованы кодом: `node scripts/make-cards.mjs` → `src/images/card-*.webp`
 (нужен `sharp`). Промпты для замены на сгенерированные — в `docs/IMAGE-PROMPTS.md`.
 
 Шрифты: Inter локально (`src/app/fonts`), Playfair Display и JetBrains Mono через `next/font/google`
